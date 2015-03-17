@@ -1,1 +1,8 @@
 %h1 Index Placeholder
+
+- @posts.each do |post|
+	%h2= link_to post.title, post
+	%p= truncate(post.content, length: 20)
+	%br/
+
+= link_to "+ post", new_post_path
